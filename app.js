@@ -5,7 +5,6 @@ const morgan = require('morgan');
 const logger = require('./config/logger');
 const config = require('./config/config');
 
-const threadSettings = require('./config/thread-settings');
 const handlers = require('./lib/handlers');
 
 
@@ -15,11 +14,6 @@ app.use(morgan('dev'));
 app.use(bodyparser.json());
 
 app.use('/static', express.static(path.join(__dirname, 'static')));
-
-
-// On application startup, we configure the thread settings for Messenger
-// conversations with our Facebook Page.
-threadSettings.apply();
 
 
 /**
