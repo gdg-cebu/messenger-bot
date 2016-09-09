@@ -2,19 +2,33 @@
   "name": "messenger-bot",
   "version": "0.0.0",
   "description": "Facebook Messenger Platform bot to handle inquiries about upcoming GDG Cebu events",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "./node_modules/.bin/nodemon bin/www -e js,json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gdg-cebu/messenger-bot.git"
   },
-  "keywords": [],
+  "keywords": [
+    "messenger",
+    "bot",
+    "automation",
+    "facebook"
+  ],
   "author": "Arnelle Balane <arnellebalane@gmail.com> (https://arnellebalane.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gdg-cebu/messenger-bot/issues"
   },
-  "homepage": "https://github.com/gdg-cebu/messenger-bot#readme"
+  "homepage": "https://github.com/gdg-cebu/messenger-bot#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "nconf": "^0.8.4",
+    "nodemon": "^1.10.2",
+    "winston": "^2.2.0"
+  }
 }

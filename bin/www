@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+const app = require('../app');
+const config = require('../config/config');
+const logger = require('../config/logger');
+
+
+app.use((err, req, res, next) => logger.error(err));
+
+app.listen(config.get('PORT'),
+    _ => logger.info(`Server is now running at port ${config.get('PORT')}`));
