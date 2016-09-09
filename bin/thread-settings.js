@@ -14,7 +14,7 @@ const persistentMenuItems = [
     },
     {
         type: 'postback',
-        title: 'See Upcoming Events',
+        title: 'Show Upcoming Events',
         payload: 'upcoming-events'
     }
 ];
