@@ -3,7 +3,6 @@ const bodyparser = require('body-parser');
 const morgan = require('morgan');
 const logger = require('./config/logger');
 const config = require('./config/config');
-
 const handlers = require('./lib/handlers');
 
 
@@ -49,8 +48,6 @@ app.post('/webhook', (req, res) => {
         // that we get messaging events from multiple Facebook Pages at once
         // when the Messenger Platform sends them by batches.
         data.entry.forEach(page => {
-            const [ id, time ] = page;
-
             // Each item in `page.messaging` corresponds to a messaging event
             // that happened to the Facebook Page that we are subscribed to
             // (e.g. a message sent to the page, our reply has been delivered,
