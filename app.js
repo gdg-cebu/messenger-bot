@@ -10,7 +10,7 @@ app.use(morgan('dev'));
 app.use(bodyparser.json());
 
 app.use('/static', express.static(path.join(__dirname, 'static')));
-app.use('/webhook', require('./webhook'));
+app.use('/webhook', require('./lib/webhook'));
 
 
 module.exports = app;
