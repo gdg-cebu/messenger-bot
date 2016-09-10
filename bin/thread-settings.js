@@ -4,7 +4,7 @@ const logger = require('../config/logger');
 const messenger = require('../lib/messenger');
 
 
-const greetingText = config.get('GDG_CEBU_DESCRIPTION');
+const greetingText = config.get('THREAD_GREETING_TEXT');
 const getStartedButtonPayload = 'get-started';
 const persistentMenuItems = [
     {
