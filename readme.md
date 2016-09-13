@@ -37,6 +37,17 @@ Here are the different configurations that you can set inside `config.json`:
 - `FIREBASE_DATABASE_URL`: The database url to a Firebase app, where the bot will fetch events.
 
 
+### Configuring Thread Settings
+
+To set the thread settings for new conversations with the Facebook Page, run the following command:
+
+```
+$ ./bin/thread-settings
+```
+
+This will set the greeting text, get started postback, and persistent menu for new conversation threads. Check out the `bin/thread-settings` file to see what it is setting these values to.
+
+
 ## Running the Server
 
 To run the application server, execute the following command:
